@@ -39,5 +39,7 @@ public class Main {
         translator.convertPrintStatements();
         translator.removeDoubleSpaces();
         translator.printInputAndOutput();
+
+        System.out.println("This is a fairly useless statement");
     }
 }
