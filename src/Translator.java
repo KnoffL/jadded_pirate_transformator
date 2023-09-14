@@ -213,6 +213,15 @@ public class Translator {
         remove("}");
     }
 
+    public void convertIncrementsAndDecrements(){
+        if(this.modifiedText.contains("++")){ // was, wenn leading statt trailing
+            this.modifiedText = this.modifiedText.replace("++", " += 1");
+        }
+        if(this.modifiedText.contains("--")){
+            this.modifiedText = this.modifiedText.replace("--", " -= 1");
+        }
+    }
+
     public void removeDoubleSpaces(){
         this.modifiedText = this.modifiedText.replace("  ", " ");
     }

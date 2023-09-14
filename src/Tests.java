@@ -74,4 +74,17 @@ public class Tests {
 
         Assert.assertEquals(testTranslator.modifiedText, expectedOutput);
     }
+
+    @Test
+    public void decrementIsConvertedCorrectly(){
+        String input = "declaredInteger--;";
+        String expectedOutput = "declaredInteger -= 1";
+
+        Translator testTranslator = new Translator(input);
+
+        testTranslator.removesFinalSemicolons();
+        testTranslator.convertIncrementsAndDecrements();
+
+        Assert.assertEquals(testTranslator.modifiedText, expectedOutput);
+    }
 }

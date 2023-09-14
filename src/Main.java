@@ -37,6 +37,7 @@ public class Main {
         translator.removeTypeSpecificators();
         translator.convertIfClauses();
         translator.convertPrintStatements();
+        translator.convertIncrementsAndDecrements();
         translator.removeDoubleSpaces();
         translator.printInputAndOutput();
 
